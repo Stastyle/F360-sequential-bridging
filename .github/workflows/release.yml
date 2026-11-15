@@ -1,14 +1,21 @@
-# Push a version tag (e.g. `git tag v1.4.0 && git push origin v1.4.0`) to publish a release:
-# a zip of the add-in folder, with the matching CHANGELOG.md section as release notes.
+# Publishes a release with a zip of the add-in folder and the matching CHANGELOG.md section.
+# Start it either way:
+#   - on GitHub: Releases > Draft a new release > type a new tag (e.g. v1.4.0) > Publish
+#   - from a terminal: git tag v1.4.0 && git push origin v1.4.0
 # The steps live in https://github.com/Stastyle/fusion-addins (release-addin.yml).
 name: Release
 
 on:
   push:
     tags: ["v*"]
+  release:
+    types: [published]
 
 permissions:
   contents: write
+
+concurrency:
+  group: release-${{ github.ref_name }}
 
 jobs:
   release:
