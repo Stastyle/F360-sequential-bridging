@@ -1,0 +1,13 @@
+{
+	"autodeskProduct": "Fusion",
+	"type": "addin",
+	"id": "6f0d2a5e-3c1b-4e7a-9b52-8a4f1d7c2e90",
+	"author": "Stastyle",
+	"description": {
+		"": "Adds sequential bridging layers to a face with a hole so it 3D prints without supports."
+	},
+	"version": "0.1.0",
+	"runOnStartup": true,
+	"supportedOS": "windows|mac",
+	"editEnabled": true
+}
