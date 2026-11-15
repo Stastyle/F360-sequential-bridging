@@ -138,3 +138,7 @@ python tools/make_icon.py SequentialBridge/resources
 ```
 
 Tested on Windows with Fusion 2706.1.17.
+
+## License
+
+[MIT](LICENSE)
