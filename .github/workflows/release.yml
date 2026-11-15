@@ -1,0 +1,15 @@
+# Push a version tag (e.g. `git tag v1.4.0 && git push origin v1.4.0`) to publish a release:
+# a zip of the add-in folder, with the matching CHANGELOG.md section as release notes.
+# The steps live in https://github.com/Stastyle/fusion-addins (release-addin.yml).
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    uses: Stastyle/fusion-addins/.github/workflows/release-addin.yml@main
